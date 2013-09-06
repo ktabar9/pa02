@@ -1,5 +1,7 @@
 #include "pa02.h"
 
+//http://www.programmingsimplified.com/c/source-code/c-program-copy-strings#include "pa02.h"
+
 /**
  * Count the number of characters in a null-terminated string 's' 
  * (not counting the null character).
@@ -8,8 +10,15 @@
  */
 int my_strlen(const char * s)
 {
- 
-   return 0;
+
+   int count = 0;
+   int i;
+   for (i=0; s[i] != 0; i++)
+{
+	count++;
+} 
+
+   return count;
 }
 
 /**
@@ -20,21 +29,37 @@ int my_strlen(const char * s)
  */
 int my_countchar(const char * s, char c)
 {
-    return 0;
+    int occurance = 0;
+    int temp = 0;
+    int i;
+    for(i=0;s[i] != 0; i++)
+    {
+	temp = c;
+	if(s[i]==temp)
+	{
+		occurance++;
+	}
+    }
+
+    return occurance;
 }
 
 /**
  * Convert an entire null-terminated string 's' to uppercase.  Only
  * alphabetical characters should be converted; numbers and symbols
  * should not be affected.  Hint: toupper(c) is a macro that yields
- * the uppercase version of a character c.
+http://www.programmingsimplified.com/c/source-code/c-program-copy-strings * the uppercase version of a character c.
  *
  * Example: char foobar[10] = "foobar";
  * my_strupper(foobar) yields "FOOBAR".
  */
 void my_strupper(char * s)
 {
-
+int i;
+for (i=0;s[i]!=0;i++)
+{
+	s[i]=toupper(s[i]);
+}
 }
 
 /**
@@ -48,7 +73,11 @@ void my_strupper(char * s)
  */
 void my_strlower(char * s)
 {
-
+int i;
+for(i=0;s[i]!=0;i++)
+{
+	s[i]=tolower(s[i]);
+}
 }
 
 /**
@@ -63,9 +92,14 @@ void my_strlower(char * s)
  */
 void my_strcpy(char * s1, const char * s2)
 {
-
+while(*s2)
+{
+	*s1 = *s2;
+	s1++;
+	s2++;
 }
-
+*s1 = '\0';
+}
 /**
  * Copy the first 'n' characters of a null-terminated string 's2' into the
  * memory pointed to by 's1'. Any existing data in 's1' will be
@@ -78,8 +112,24 @@ void my_strcpy(char * s1, const char * s2)
  */
 void my_strncpy(char * s1, const char * s2, int num)
 {
-    
+/*int i;
+while(*s2)
+{
+	for(i=0;i<=num;i++)
+	{
+		*s1 = *s2;
+		s1++;
+		s2++;
+	}
+	if(i=num)
+	{
+		*s1 = '\0';
+	}
+}*/
+strncpy(s1,&s2[0],num);
+s1[num] = '\0';
 }
+
 
 
 /** 
