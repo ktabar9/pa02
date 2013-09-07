@@ -1,89 +1,89 @@
-==15287== Memcheck, a memory error detector
-==15287== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
-==15287== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
-==15287== Command: ./pa02 inputs/input4
-==15287== Parent PID: 15278
-==15287== 
---15287-- 
---15287-- Valgrind options:
---15287--    --suppressions=/usr/lib/valgrind/debian-libc6-dbg.supp
---15287--    --tool=memcheck
---15287--    --leak-check=full
---15287--    --verbose
---15287--    --log-file=outputs/valgrind-log24
---15287-- Contents of /proc/version:
---15287--   Linux version 3.8.0-19-generic (buildd@allspice) (gcc version 4.7.3 (Ubuntu/Linaro 4.7.3-1ubuntu1) ) #29-Ubuntu SMP Wed Apr 17 18:16:28 UTC 2013
---15287-- Arch and hwcaps: AMD64, amd64-sse3-cx16
---15287-- Page sizes: currently 4096, max supported 4096
---15287-- Valgrind library directory: /usr/lib/valgrind
---15287-- Reading syms from /home/kristina/ECE264/solutions/pa02/PA02/pa02
---15287-- Reading syms from /lib/x86_64-linux-gnu/ld-2.17.so
---15287--   Considering /lib/x86_64-linux-gnu/ld-2.17.so ..
---15287--   .. CRC mismatch (computed 0e805c9a wanted d5b108bd)
---15287--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.17.so ..
---15287--   .. CRC is valid
---15287--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.17.so ..
---15287--   .. CRC is valid
---15287-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
---15287--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
---15287--   .. CRC mismatch (computed 8dadd6e3 wanted 096f8488)
---15287--    object doesn't have a symbol table
---15287--    object doesn't have a dynamic symbol table
---15287-- Scheduler: using generic scheduler lock implementation.
---15287-- Reading suppressions file: /usr/lib/valgrind/debian-libc6-dbg.supp
---15287-- Reading suppressions file: /usr/lib/valgrind/default.supp
-==15287== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-15287-by-kristina-on-???
-==15287== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-15287-by-kristina-on-???
-==15287== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-15287-by-kristina-on-???
-==15287== 
-==15287== TO CONTROL THIS PROCESS USING vgdb (which you probably
-==15287== don't want to do, unless you know exactly what you're doing,
-==15287== or are doing some strange experiment):
-==15287==   /usr/lib/valgrind/../../bin/vgdb --pid=15287 ...command...
-==15287== 
-==15287== TO DEBUG THIS PROCESS USING GDB: start GDB like this
-==15287==   /path/to/gdb ./pa02
-==15287== and then give GDB the following command
-==15287==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=15287
-==15287== --pid is optional if only one valgrind process is running
-==15287== 
---15287-- REDIR: 0x4018f40 (strlen) redirected to 0x3806c7e1 (???)
---15287-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
---15287--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
---15287--   .. CRC mismatch (computed 7ae7d82a wanted 34ea3d89)
---15287--    object doesn't have a symbol table
---15287-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
---15287--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
---15287--   .. CRC mismatch (computed 272279e5 wanted bc83f658)
---15287--    object doesn't have a symbol table
---15287-- REDIR: 0x4018db0 (index) redirected to 0x4c2d440 (index)
---15287-- REDIR: 0x4018e30 (strcmp) redirected to 0x4c2e480 (strcmp)
---15287-- Reading syms from /lib/x86_64-linux-gnu/libc-2.17.so
---15287--   Considering /lib/x86_64-linux-gnu/libc-2.17.so ..
---15287--   .. CRC mismatch (computed 7a0d6b10 wanted 5a2fe04b)
---15287--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.17.so ..
---15287--   .. CRC is valid
---15287--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.17.so ..
---15287--   .. CRC is valid
---15287-- REDIR: 0x4ec1990 (strcasecmp) redirected to 0x4a25710 (_vgnU_ifunc_wrapper)
---15287-- REDIR: 0x4ebdd20 (strnlen) redirected to 0x4a25710 (_vgnU_ifunc_wrapper)
---15287-- REDIR: 0x4ec3c60 (strncasecmp) redirected to 0x4a25710 (_vgnU_ifunc_wrapper)
---15287-- REDIR: 0x4ec07a0 (memset) redirected to 0x4a25710 (_vgnU_ifunc_wrapper)
---15287-- REDIR: 0x4ec0750 (memcpy@GLIBC_2.2.5) redirected to 0x4a25710 (_vgnU_ifunc_wrapper)
---15287-- REDIR: 0x4ebf710 (__GI_strrchr) redirected to 0x4c2d260 (__GI_strrchr)
---15287-- REDIR: 0x4ebc100 (strcmp) redirected to 0x4a25710 (_vgnU_ifunc_wrapper)
---15287-- REDIR: 0x4f6cbd0 (__strcmp_sse42) redirected to 0x4c2e3e0 (strcmp)
---15287-- REDIR: 0x4ec7b30 (strchrnul) redirected to 0x4c2fea0 (strchrnul)
---15287-- REDIR: 0x4eb79b0 (free) redirected to 0x4c2ba00 (free)
-==15287== 
-==15287== HEAP SUMMARY:
-==15287==     in use at exit: 0 bytes in 0 blocks
-==15287==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
-==15287== 
-==15287== All heap blocks were freed -- no leaks are possible
-==15287== 
-==15287== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
---15287-- 
---15287-- used_suppression:      2 dl-hack3-cond-1
-==15287== 
-==15287== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==29942== Memcheck, a memory error detector
+==29942== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==29942== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==29942== Command: ./pa02 inputs/input4
+==29942== Parent PID: 29933
+==29942== 
+--29942-- 
+--29942-- Valgrind options:
+--29942--    --suppressions=/usr/lib/valgrind/debian-libc6-dbg.supp
+--29942--    --tool=memcheck
+--29942--    --leak-check=full
+--29942--    --verbose
+--29942--    --log-file=outputs/valgrind-log24
+--29942-- Contents of /proc/version:
+--29942--   Linux version 3.8.0-19-generic (buildd@allspice) (gcc version 4.7.3 (Ubuntu/Linaro 4.7.3-1ubuntu1) ) #29-Ubuntu SMP Wed Apr 17 18:16:28 UTC 2013
+--29942-- Arch and hwcaps: AMD64, amd64-sse3-cx16
+--29942-- Page sizes: currently 4096, max supported 4096
+--29942-- Valgrind library directory: /usr/lib/valgrind
+--29942-- Reading syms from /home/kristina/ECE264/solutions/pa02/PA02/pa02
+--29942-- Reading syms from /lib/x86_64-linux-gnu/ld-2.17.so
+--29942--   Considering /lib/x86_64-linux-gnu/ld-2.17.so ..
+--29942--   .. CRC mismatch (computed 0e805c9a wanted d5b108bd)
+--29942--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.17.so ..
+--29942--   .. CRC is valid
+--29942--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.17.so ..
+--29942--   .. CRC is valid
+--29942-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--29942--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--29942--   .. CRC mismatch (computed 8dadd6e3 wanted 096f8488)
+--29942--    object doesn't have a symbol table
+--29942--    object doesn't have a dynamic symbol table
+--29942-- Scheduler: using generic scheduler lock implementation.
+--29942-- Reading suppressions file: /usr/lib/valgrind/debian-libc6-dbg.supp
+--29942-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==29942== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-29942-by-kristina-on-???
+==29942== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-29942-by-kristina-on-???
+==29942== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-29942-by-kristina-on-???
+==29942== 
+==29942== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==29942== don't want to do, unless you know exactly what you're doing,
+==29942== or are doing some strange experiment):
+==29942==   /usr/lib/valgrind/../../bin/vgdb --pid=29942 ...command...
+==29942== 
+==29942== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==29942==   /path/to/gdb ./pa02
+==29942== and then give GDB the following command
+==29942==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=29942
+==29942== --pid is optional if only one valgrind process is running
+==29942== 
+--29942-- REDIR: 0x4018f40 (strlen) redirected to 0x3806c7e1 (???)
+--29942-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--29942--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--29942--   .. CRC mismatch (computed 7ae7d82a wanted 34ea3d89)
+--29942--    object doesn't have a symbol table
+--29942-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--29942--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--29942--   .. CRC mismatch (computed 272279e5 wanted bc83f658)
+--29942--    object doesn't have a symbol table
+--29942-- REDIR: 0x4018db0 (index) redirected to 0x4c2d440 (index)
+--29942-- REDIR: 0x4018e30 (strcmp) redirected to 0x4c2e480 (strcmp)
+--29942-- Reading syms from /lib/x86_64-linux-gnu/libc-2.17.so
+--29942--   Considering /lib/x86_64-linux-gnu/libc-2.17.so ..
+--29942--   .. CRC mismatch (computed 7a0d6b10 wanted 5a2fe04b)
+--29942--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.17.so ..
+--29942--   .. CRC is valid
+--29942--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.17.so ..
+--29942--   .. CRC is valid
+--29942-- REDIR: 0x4ec1990 (strcasecmp) redirected to 0x4a25710 (_vgnU_ifunc_wrapper)
+--29942-- REDIR: 0x4ebdd20 (strnlen) redirected to 0x4a25710 (_vgnU_ifunc_wrapper)
+--29942-- REDIR: 0x4ec3c60 (strncasecmp) redirected to 0x4a25710 (_vgnU_ifunc_wrapper)
+--29942-- REDIR: 0x4ec07a0 (memset) redirected to 0x4a25710 (_vgnU_ifunc_wrapper)
+--29942-- REDIR: 0x4ec0750 (memcpy@GLIBC_2.2.5) redirected to 0x4a25710 (_vgnU_ifunc_wrapper)
+--29942-- REDIR: 0x4ebf710 (__GI_strrchr) redirected to 0x4c2d260 (__GI_strrchr)
+--29942-- REDIR: 0x4ebc100 (strcmp) redirected to 0x4a25710 (_vgnU_ifunc_wrapper)
+--29942-- REDIR: 0x4f6cbd0 (__strcmp_sse42) redirected to 0x4c2e3e0 (strcmp)
+--29942-- REDIR: 0x4ec7b30 (strchrnul) redirected to 0x4c2fea0 (strchrnul)
+--29942-- REDIR: 0x4eb79b0 (free) redirected to 0x4c2ba00 (free)
+==29942== 
+==29942== HEAP SUMMARY:
+==29942==     in use at exit: 0 bytes in 0 blocks
+==29942==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==29942== 
+==29942== All heap blocks were freed -- no leaks are possible
+==29942== 
+==29942== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+--29942-- 
+--29942-- used_suppression:      2 dl-hack3-cond-1
+==29942== 
+==29942== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)

@@ -35,7 +35,7 @@ int my_countchar(const char * s, char c)
     for(i=0;s[i] != 0; i++)
     {
 	temp = c;
-	if(s[i]==temp)
+	if(s[i]==temp)http://bytes.com/topic/c/answers/214701-adding-chars-string
 	{
 		occurance++;
 	}
@@ -68,14 +68,14 @@ for (i=0;s[i]!=0;i++)
  * should not be affected.  Hint: tolower(c) is a macro that yields
  * the lowercase version of a character 'c'.
  *
- * Example: char foobar[10] = "FOOBAR";
+s allow you to alter the way comparison of composed character sequences is performed and to specify a specific range of ch * Example: char foobar[10] = "FOOBAR";
  * my_strupper(foobar) yields "foobar".
  */
 void my_strlower(char * s)
 {
 int i;
 for(i=0;s[i]!=0;i++)
-{
+{http://bytes.com/topic/c/answers/214701-adding-chars-string
 	s[i]=tolower(s[i]);
 }
 }
@@ -112,20 +112,6 @@ while(*s2)
  */
 void my_strncpy(char * s1, const char * s2, int num)
 {
-/*int i;
-while(*s2)
-{
-	for(i=0;i<=num;i++)
-	{
-		*s1 = *s2;
-		s1++;
-		s2++;
-	}
-	if(i=num)
-	{
-		*s1 = '\0';
-	}
-}*/
 strncpy(s1,&s2[0],num);
 s1[num] = '\0';
 }
@@ -143,7 +129,7 @@ s1[num] = '\0';
  */
 void my_strcat(char * s1, const char * s2) 
 {
-    
+strcat(s1,s2);
 }
 
 /** 
@@ -151,13 +137,13 @@ void my_strcat(char * s1, const char * s2)
  * string 's2' onto the end of the null-terminated string 's1'.  Note: you
  * can assume that there is sufficient memory available in 's1'.  Hint:
  * Don't forget to terminate the new string with '\0'!
- * 
+ *
  * Example: char foo[10] = "foo";
  * my_strcat(foo, "bar", 1) yields "foob".
  */
 void my_strncat(char * s1, const char * s2, int num)
 {
-   
+strncat(s1,s2,num);
 }
 
 /**
@@ -172,7 +158,11 @@ void my_strncat(char * s1, const char * s2, int num)
 
 const char *my_strstr(const char * s1, const char * s2)
 {
-    return NULL;
+strstr(s1,s2);
+if(strstr==0)
+{
+   return NULL;
+}
 }
 
 
@@ -205,7 +195,13 @@ const char *my_strstr(const char * s1, const char * s2)
  */
 void my_strinsert(char *s1, const char *s2, int pos)
 {
-  
+int totalLen = 0;
+totalLen = strlen(s1)+strlen(s2);
+int i;
+for(i=0;i<=strlen(s1);i++)
+{
+	s1[i]
+}
 }
 
 /**
